@@ -17,7 +17,7 @@ export default class App extends React.Component {
         return (
             <div>
                 <User title="User Information" onNewGreetMessage={this.handleNewGreetMessage} />
-                <IndexLink to='/' activeClassName='active' activeStyle={{fontWeight:'bold', color:'green'}}>My Home</IndexLink> |
+                <IndexLink to='/' activeClassName='active' activeStyle={{fontWeight:'bold', color:'green'}}>Home</IndexLink> |
                 <Link to='/clock' activeClassName='active' activeStyle={{fontWeight:'bold', color:'green'}}>Clock</Link> |
                 <Link to='/realclock' activeClassName='active' activeStyle={{fontWeight:'bold', color:'green'}}>Real Clock</Link>
                 <HelloWorld value={this.state.greetValue} />
