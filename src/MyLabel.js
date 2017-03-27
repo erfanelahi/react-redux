@@ -8,6 +8,7 @@ export default function MyLabel({ title, myValue }) {
         <p style={{ color: 'tan', marginBottom: '0px' }}> {title} </p>
     );
 }
+
 MyLabel.propTypes = {
     title: React.PropTypes.string,
     myValue: React.PropTypes.string
