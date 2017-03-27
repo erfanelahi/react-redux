@@ -17,6 +17,11 @@ export default class User extends React.Component {
         //this.onValueChange = this.onValueChange.bind(this);
         this.onFromSubmit = this.onFromSubmit.bind(this);
     }
+    // property initializer syntax
+    // Warning: this is *experimental* syntax.
+    // testHandleClick = () => {
+    //     console.log('this is:', this);
+    // }
     clearAll(event) {
         this.setState({ users: [] });
     }
@@ -39,6 +44,7 @@ export default class User extends React.Component {
                 <button onClick={this.clearAll}>Clear All</button>
                 <table><tbody>{this.state.users.map(this.bindUserDetails)}</tbody></table>
                 <form onSubmit={this.onFromSubmit}>
+                    {/*arrow function in the callback. not recommended.*/}
                     <input type="text" onChange={(e) => this.onValueChange(e)} ref="myValue" />
                     <button>Submit</button>
                 </form>
