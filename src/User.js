@@ -14,7 +14,7 @@ export default class User extends React.Component {
             myValue: "Hi"
         };
         this.clearAll = this.clearAll.bind(this);
-        this.onValueChange = this.onValueChange.bind(this);
+        //this.onValueChange = this.onValueChange.bind(this);
         this.onFromSubmit = this.onFromSubmit.bind(this);
     }
     clearAll(event) {
@@ -39,7 +39,7 @@ export default class User extends React.Component {
                 <button onClick={this.clearAll}>Clear All</button>
                 <table><tbody>{this.state.users.map(this.bindUserDetails)}</tbody></table>
                 <form onSubmit={this.onFromSubmit}>
-                    <input type="text" onChange={this.onValueChange} ref="myValue" />
+                    <input type="text" onChange={(e) => this.onValueChange(e)} ref="myValue" />
                     <button>Submit</button>
                 </form>
                 <label>{this.state.myValue}</label>
