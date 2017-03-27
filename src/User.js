@@ -1,6 +1,7 @@
 import React from 'react';
 import HelloWorld from './HelloWorld';
 import UserDetails from './UserDetails';
+import MyLabel from './MyLabel';
 
 export default class User extends React.Component {
     constructor(props) {
@@ -44,6 +45,7 @@ export default class User extends React.Component {
                 <button onClick={this.clearAll}>Clear All</button>
                 <table><tbody>{this.state.users.map(this.bindUserDetails)}</tbody></table>
                 <form onSubmit={this.onFromSubmit}>
+                    <MyLabel title="Type Below :" myValue={this.refs.myValue ? this.refs.myValue.value : ""} />
                     {/*arrow function in the callback. not recommended.*/}
                     <input type="text" onChange={(e) => this.onValueChange(e)} ref="myValue" />
                     <button>Submit</button>
