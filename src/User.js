@@ -2,6 +2,7 @@ import React from 'react';
 import HelloWorld from './HelloWorld';
 import UserDetails from './UserDetails';
 import MyLabel from './MyLabel';
+import MyBox from './MyBox';
 
 export default class User extends React.Component {
     constructor(props) {
@@ -50,7 +51,9 @@ export default class User extends React.Component {
                     <input type="text" onChange={(e) => this.onValueChange(e)} ref="myValue" />
                     <button>Submit</button>
                 </form>
-                <label>{this.state.myValue}</label>
+                <MyBox boxColor='blue'>
+                    <h4>{this.state.myValue}</h4>
+                </MyBox>
             </fieldset>
         );
     }

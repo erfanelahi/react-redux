@@ -10,6 +10,6 @@ export default function MyLabel({ title, myValue }) {
 }
 
 MyLabel.propTypes = {
-    title: React.PropTypes.string,
+    title: React.PropTypes.string.isRequired,
     myValue: React.PropTypes.string
 };
