@@ -40,6 +40,7 @@ export default class User extends React.Component {
         this.refs.myValue.value = "";
     }
     render() {
+        const myBoxProps = { boxColor: 'red' }; 
         return (
             <fieldset>
                 <legend>{this.props.title}</legend>
@@ -51,7 +52,7 @@ export default class User extends React.Component {
                     <input type="text" onChange={(e) => this.onValueChange(e)} ref="myValue" />
                     <button>Submit</button>
                 </form>
-                <MyBox boxColor='red' myElement={<HelloWorld />} myComponent={HelloWorld} 
+                <MyBox {...myBoxProps} myElement={<HelloWorld />} myComponent={HelloWorld} 
                    welcome={(Math.random() > 0.5) ? "welcomeES6" : "welcomeFunc"} >
                     <h4>{this.state.myValue}</h4>
                 </MyBox>
