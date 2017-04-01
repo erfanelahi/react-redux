@@ -25,3 +25,7 @@ MyBox.propTypes = {
     myComponent : React.PropTypes.func,
     welcome : React.PropTypes.string.isRequired
 }
+
+MyBox.defaultProps = {
+    boxColor : "blue"
+}
