@@ -18,6 +18,7 @@ export default class User extends React.Component {
         this.clearAll = this.clearAll.bind(this);
         //this.onValueChange = this.onValueChange.bind(this);
         this.onFromSubmit = this.onFromSubmit.bind(this);
+        this.setMyRefValue = this.setMyRefValue.bind(this);
     }
     // property initializer syntax
     // Warning: this is *experimental* syntax.
@@ -39,6 +40,9 @@ export default class User extends React.Component {
         this.props.onNewGreetMessage(this.refs_myValue.value);
         this.refs_myValue.value = "";
     }
+    setMyRefValue(input){
+        this.refs_myValue = input;
+    }
     render() {
         const myBoxProps = { boxColor: 'red' }; 
         return (
@@ -49,7 +53,7 @@ export default class User extends React.Component {
                 <form onSubmit={this.onFromSubmit}>
                     <MyLabel title="Type Below :" myValue={this.refs_myValue ? this.refs_myValue.value : ""} />
                     {/*arrow function in the callback. not recommended.*/}
-                    <input type="text" onChange={(e) => this.onValueChange(e)} ref={(input) => { this.refs_myValue = input; }} />
+                    <input type="text" onChange={(e) => this.onValueChange(e)} ref={this.setMyRefValue} />
                     <button>Submit</button>
                 </form>
                 <MyBox {...myBoxProps} myElement={<HelloWorld />} myComponent={HelloWorld} 
