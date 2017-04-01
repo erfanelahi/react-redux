@@ -20,7 +20,7 @@ export default function MyBox(props) {
 
 MyBox.propTypes = {
     boxColor : React.PropTypes.string.isRequired,
-    myElement : React.PropTypes.object,
+    myElement : React.PropTypes.element,
     myComponent : React.PropTypes.func,
     welcome : React.PropTypes.string.isRequired
 }
