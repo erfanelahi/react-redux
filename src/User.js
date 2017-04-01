@@ -35,9 +35,9 @@ export default class User extends React.Component {
     }
     onFromSubmit(e) {
         e.preventDefault();
-        alert(this.refs.myValue.value);
-        this.props.onNewGreetMessage(this.refs.myValue.value);
-        this.refs.myValue.value = "";
+        alert(this.refs_myValue.value);
+        this.props.onNewGreetMessage(this.refs_myValue.value);
+        this.refs_myValue.value = "";
     }
     render() {
         const myBoxProps = { boxColor: 'red' }; 
@@ -47,9 +47,9 @@ export default class User extends React.Component {
                 <button onClick={this.clearAll}>Clear All</button>
                 <table><tbody>{this.state.users.map(this.bindUserDetails)}</tbody></table>
                 <form onSubmit={this.onFromSubmit}>
-                    <MyLabel title="Type Below :" myValue={this.refs.myValue ? this.refs.myValue.value : ""} />
+                    <MyLabel title="Type Below :" myValue={this.refs_myValue ? this.refs_myValue.value : ""} />
                     {/*arrow function in the callback. not recommended.*/}
-                    <input type="text" onChange={(e) => this.onValueChange(e)} ref="myValue" />
+                    <input type="text" onChange={(e) => this.onValueChange(e)} ref={(input) => { this.refs_myValue = input; }} />
                     <button>Submit</button>
                 </form>
                 <MyBox {...myBoxProps} myElement={<HelloWorld />} myComponent={HelloWorld} 
