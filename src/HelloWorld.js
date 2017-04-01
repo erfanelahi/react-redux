@@ -7,7 +7,7 @@ const HelloWorld = ({value = "World"}) => {
         return <span style={Object.assign({}, myStyle, {color: 'limegreen'})}>{value}</span>;
     };
     return (
-        <h1>Hello {setStyle(value)}!</h1>
+        <h4>Hello {setStyle(value)}!</h4>
     );
 }
 

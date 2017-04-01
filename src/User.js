@@ -51,7 +51,7 @@ export default class User extends React.Component {
                     <input type="text" onChange={(e) => this.onValueChange(e)} ref="myValue" />
                     <button>Submit</button>
                 </form>
-                <MyBox boxColor='blue'>
+                <MyBox boxColor='blue' myElement={<HelloWorld />} myComponent={HelloWorld} >
                     <h4>{this.state.myValue}</h4>
                 </MyBox>
             </fieldset>
