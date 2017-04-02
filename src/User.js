@@ -37,7 +37,9 @@ export default class User extends React.Component {
     onFromSubmit(e) {
         e.preventDefault();
         alert(this.refs_myValue.value);
-        this.props.onNewGreetMessage(this.refs_myValue.value);
+        // this.props.onNewGreetMessage(this.refs_myValue.value);
+        // Or 
+        this.props.onNewGreetMessage(this.state.myValue);
         this.refs_myValue.value = "";
     }
     setMyRefValue(input){
