@@ -55,7 +55,7 @@ export default class User extends React.Component {
                 <form onSubmit={this.onFromSubmit}>
                     <MyLabel title="Type Below :" myValue={this.refs_myValue ? this.refs_myValue.value : ""} />
                     {/*arrow function in the callback. not recommended.*/}
-                    <input type="text" onChange={(e) => this.onValueChange(e)} ref={this.setMyRefValue} />
+                    <input type="text" defaultValue="Erfan" onChange={(e) => this.onValueChange(e)} ref={this.setMyRefValue} />
                     <button>Submit</button>
                 </form>
                 <MyBox {...myBoxProps} myElement={<HelloWorld />} myComponent={HelloWorld} 
